@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.hib.model.Otp" table="Otp">
+		<id name="otpId" type="int">
+			<column name="OtpId" />
+			<generator class="increment"/>
+		</id>
+		
+		<property name="userName" type="java.lang.String">
+			<column name="UserName"/>
+		</property>
+		
+		<property name="otpNo" type="int">
+			<column name="OtpNo"/>
+		</property>
+		
+		<property name="nPassword" type="java.lang.String">
+			<column name="NPassword"/>
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="Status"/>
+		</property>
+	</class>
+</hibernate-mapping>

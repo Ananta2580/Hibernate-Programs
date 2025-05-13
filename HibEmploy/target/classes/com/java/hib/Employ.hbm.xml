@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.hib.Employ" table="Employ">
+		<id name="empno" type="int">
+			<column name="EmpNo"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="Name"/>
+		</property>
+		<property name="gender" type="java.lang.String">
+			<column name="Gender"/>
+		</property>
+		
+		<property name="dept" type="java.lang.String">
+			<column name="Dept"/>
+		</property>
+		
+		<property name="desig" type="java.lang.String">
+			<column name="Desig"/>
+		</property>
+		<property name="basic" type="double">
+			<column name="Basic"/>
+		</property>
+	</class>
+	
+</hibernate-mapping>

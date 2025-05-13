@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.hib.model.Employee" table="Employee">
+		<id name="empId" type="int">
+			<column name="EmpId" />
+			<generator class="increment"/>
+		</id>
+		
+		<property name="firstName" type="java.lang.String">
+			<column name="FirstName"/>
+		</property>
+		
+		<property name="lastName" type="java.lang.String">
+			<column name="LastName"/>
+		</property>
+		
+		<property name="userName" type="java.lang.String">
+			<column name="UserName"/>
+		</property>
+		
+		<property name="passCode" type="java.lang.String">
+			<column name="Passcode"/>
+		</property>
+		
+		<property name="email" type="java.lang.String">
+			<column name="Email"/>
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="Status"/>
+		</property>
+	</class>
+</hibernate-mapping>

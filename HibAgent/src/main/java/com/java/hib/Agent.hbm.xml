@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.hib.Agent" table="Agent">
+		<id name="agentId" type="int">
+			<column name="AgentId"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="name" type="java.lang.String">
+			<column name="Name"/>
+		</property>
+		
+		<property name="city" type="java.lang.String">
+			<column name="City"/>
+		</property>
+		
+		<property name="gender" type="java.lang.String">
+			<column name="Gender"/>
+		</property>
+		
+		<property name="maritalStatus" type="int">
+			<column name="MaritalStatus"/>
+		</property>
+		
+		<property name="premium" type="double">
+			<column name="Premium"/>
+		</property>
+	</class>
+</hibernate-mapping>

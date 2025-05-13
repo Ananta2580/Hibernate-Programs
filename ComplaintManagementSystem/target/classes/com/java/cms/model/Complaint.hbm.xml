@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.cms.model.Complaint" table="Complaint">
+		<id name="complaintId" type="java.lang.String">
+			<column name="ComplaintId"/>
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="complaintType" type="java.lang.String">
+			<column name="ComplaintType"/>
+		</property>
+		
+		<property name="cDescription" type="java.lang.String">
+			<column name="CDescription"/>
+		</property>
+		
+		<property name="complaintDate" type="java.sql.Date">
+			<column name="ComplaintDate"/>
+		</property>
+		
+		<property name="severity" type="java.lang.String">
+			<column name="Severity"/>
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="Status"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

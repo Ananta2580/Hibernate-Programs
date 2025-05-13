@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.cms.model.Resolve" table="Resolve">
+		<id name="resolveId" type="int">
+			<column name="ResolveId"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="complaintId" type="java.lang.String">
+			<column name="ComplaintId"/>
+		</property>
+		
+		<property name="complaintDate" type="java.sql.Date">
+			<column name="ComplaintDate"/>
+		</property>
+		
+		<property name="resolveDate" type="java.sql.Date">
+			<column name="ResolveDate"/>
+		</property>
+		
+		<property name="resolvedBy" type="java.lang.String">
+			<column name="ResolvedBy"/>
+		</property>
+		
+		<property name="comments" type="java.lang.String">
+			<column name="Comments"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

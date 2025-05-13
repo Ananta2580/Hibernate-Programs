@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.java.hms.Doctor" table="Doctor">
+		<id name="doctorId" type="int">
+			<column name="DoctorId"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="doctorName" type="java.lang.String">
+			<column name="DoctorName"/>
+		</property>
+		
+		<property name="specialization" type="java.lang.String">
+			<column name="Specialization"/>
+		</property>
+		
+		<property name="doctorPhone" type="long">
+			<column name="DoctorPhone"/>
+		</property>
+	</class>
+</hibernate-mapping>

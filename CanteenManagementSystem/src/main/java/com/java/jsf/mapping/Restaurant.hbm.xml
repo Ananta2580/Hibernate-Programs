@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-Oct-2023, 9:34:49 am by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping>
+	<class name="com.java.jsf.model.Restaurant" table="Restaurant">
+		<id name="restaurantId" type="int">
+			<column name="RestaurantId"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="restaurantName" type="java.lang.String">
+			<column name="RestaurantName"/>
+		</property>
+		
+		<property name="city" type="java.lang.String">
+			<column name="City"/>
+		</property>
+		
+		<property name="rating" type="double">
+			<column name="Rating"/>
+		</property>
+		
+		<property name="flag">
+			<column name="Flag"/>
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.java.jsf.model.Flag</param>
+				<param name="type">12</param>
+			</type>
+		</property>
+	</class>
+	
+	<query name="showRestaurant">
+		from Restaurant
+	</query>
+	
+</hibernate-mapping>

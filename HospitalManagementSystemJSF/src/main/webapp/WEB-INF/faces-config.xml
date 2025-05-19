@@ -1,0 +1,65 @@
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd" 
+              version="2.0" metadata-complete="false">
+    <!-- This file must be present with our jar, even if it is empty.  Otherwise, our Java annotations won't get scanned! -->
+    
+<managed-bean>
+	<managed-bean-name>admin</managed-bean-name>
+    <managed-bean-class>com.java.jsf.model.Admin</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>appointment</managed-bean-name>
+    <managed-bean-class>com.java.jsf.model.Appointment</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>doctor</managed-bean-name>
+    <managed-bean-class>com.java.jsf.model.Doctor</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>patient</managed-bean-name>
+    <managed-bean-class>com.java.jsf.model.Patient</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>docDao</managed-bean-name>
+    <managed-bean-class>com.java.jsf.dao.HospitalDaoImpl</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>hospitalController</managed-bean-name>
+    <managed-bean-class>com.java.jsf.controller.HospitalController</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    
+    <managed-property>
+            <property-name>docDao</property-name>
+            <property-class>com.java.jsf.dao.HospitalDaoImpl</property-class>
+            <value>#{docDao}</value>
+    </managed-property>
+    <managed-property>
+            <property-name>patient</property-name>
+            <property-class>com.java.jsf.model.Patient</property-class>
+            <value>#{patient}</value>
+    </managed-property>
+    <managed-property>
+            <property-name>doctor</property-name>
+            <property-class>com.java.jsf.model.Doctor</property-class>
+            <value>#{doctor}</value>
+    </managed-property>
+    <managed-property>
+            <property-name>appointment</property-name>
+            <property-class>com.java.jsf.model.Appointment</property-class>
+            <value>#{appointment}</value>
+    </managed-property>
+    
+</managed-bean>
+
+</faces-config>
